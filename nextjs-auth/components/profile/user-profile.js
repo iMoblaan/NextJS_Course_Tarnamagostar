@@ -1,6 +1,7 @@
 // import { getSession } from 'next-auth/client';
 // import { useEffect, useState } from 'react';
 
+import ProfileDetails from './profile-details/profile-details';
 import ProfileForm from './profile-form';
 import classes from './user-profile.module.css';
 
@@ -35,9 +36,24 @@ function UserProfile() {
     console.log(data);
   }
 
+  async function aproveDetailsHandler(aproveDetails) {
+    const response = await fetch('/api/user/aprove-details', {
+      method: 'PATCH',
+      body: JSON.stringify(aproveDetails),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    const data = await response.json();
+
+    console.log(data);
+  }
+
   return (
     <section className={classes.profile}>
-      <h1>Your User Profile</h1>
+      <h1>User Profile</h1>
+      <ProfileDetails onAproveDetails={aproveDetailsHandler} />
       <ProfileForm onChangePassword={changePasswordHandler} />
     </section>
   );
