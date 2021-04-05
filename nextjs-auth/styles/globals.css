@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans:wght@400;700&display=swap');
 
+/*
+
+Green : #67b26f
+Blue :  #4ca2cd
+Mid :   #5aaa9d
+Midnight-Blue: #2c3e50
+
+*/
+
 * {
   box-sizing: border-box;
 }
@@ -7,6 +16,13 @@
 body {
   font-family: 'Open Sans', 'Lato', sans-serif;
   margin: 0;
+  background: linear-gradient(
+    to bottom left,
+    #67b26f,
+    #4ca2cd,
+    rgba(0, 0, 0, 0.2)
+  );
+  height: 100%;
 }
 
 h1,

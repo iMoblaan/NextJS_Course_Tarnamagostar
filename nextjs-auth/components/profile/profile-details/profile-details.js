@@ -24,29 +24,27 @@ function ProfileDetails(props) {
   }
 
   return (
-    <div>
-      <form className={classes.form} onSubmit={submitHandler}>
-        <div className={classes.control}>
-          <label htmlFor='firstName'>First Name</label>
-          <input type='text' id='firstName' ref={firstNameRef} />
-        </div>
-        <div className={classes.control}>
-          <label htmlFor='lastName'>Last Name</label>
-          <input type='text' id='lastName' ref={lastNameRef} />
-        </div>
-        <div className={classes.control}>
-          <label htmlFor='country'>Country</label>
-          <input type='text' id='country' ref={countryRef} />
-        </div>
-        <div className={classes.control}>
-          <label htmlFor='city'>City</label>
-          <input type='text' id='city' ref={cityRef} />
-        </div>
-        <div className={classes.action}>
-          <button>Aprove Details</button>
-        </div>
-      </form>
-    </div>
+    <form className={classes.form} onSubmit={submitHandler}>
+      <div className={classes.control}>
+        <label htmlFor='firstName'>First Name</label>
+        <input type='text' id='firstName' ref={firstNameRef} />
+      </div>
+      <div className={classes.control}>
+        <label htmlFor='lastName'>Last Name</label>
+        <input type='text' id='lastName' ref={lastNameRef} />
+      </div>
+      <div className={classes.control}>
+        <label htmlFor='country'>Country</label>
+        <input type='text' id='country' ref={countryRef} />
+      </div>
+      <div className={classes.control}>
+        <label htmlFor='city'>City</label>
+        <input type='text' id='city' ref={cityRef} />
+      </div>
+      <div className={classes.action}>
+        <button>Aprove Details</button>
+      </div>
+    </form>
   );
 }
 

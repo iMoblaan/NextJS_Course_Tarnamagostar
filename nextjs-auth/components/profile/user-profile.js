@@ -5,7 +5,7 @@ import ProfileDetails from './profile-details/profile-details';
 import ProfileForm from './profile-form';
 import classes from './user-profile.module.css';
 
-function UserProfile() {
+function UserProfile(props) {
   // const [isLoading, setIsLoading] = useState(true);
 
   // useEffect(() => {
@@ -52,7 +52,7 @@ function UserProfile() {
 
   return (
     <section className={classes.profile}>
-      <h1>User Profile</h1>
+      <h1>USER PROFILE</h1>
       <ProfileDetails onAproveDetails={aproveDetailsHandler} />
       <ProfileForm onChangePassword={changePasswordHandler} />
     </section>
